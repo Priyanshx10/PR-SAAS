@@ -1,7 +1,6 @@
 import Link from "next/link";
 import React from "react";
 import { TbSettingsAutomation } from "react-icons/tb";
-import { UserButton, currentUser } from "@clerk/nextjs";
 import { MenuIcon } from "lucide-react";
 
 type Props = {};

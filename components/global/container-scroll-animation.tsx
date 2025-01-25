@@ -2,7 +2,6 @@
 import React, { useRef } from "react";
 import { useScroll, useTransform, motion } from "framer-motion";
 import Image from "next/image";
-import TempImage from "../../public/temp-banner.png";
 
 export const ContainerScroll = ({
   titleComponent,
@@ -86,7 +85,7 @@ export const Card = ({
     >
       <div className="bg-gray-100 h-full w-full rounded-2xl  gap-4 overflow-hidden p-4 transition-all ">
         <Image
-          src={TempImage}
+          src="/temp-banner.png"
           fill
           alt="bannerImage"
           className="object-cover border-8 rounded-2xl"

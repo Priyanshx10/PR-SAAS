@@ -1,7 +1,10 @@
 import { ContainerScroll } from "@/components/global/container-scroll-animation";
 import Navbar from "@/components/global/NavBar";
 import { Button } from "@/components/ui/button";
-import { CheckIcon } from "lucide-react";
+import { InfiniteMovingCards } from "@/components/global/infinite-moving-card";
+import { clients, products } from "@/lib/constant";
+import { HeroParallax } from "@/components/global/connect-parallax";
+import { LampComponent } from "@/components/global/lamp";
 
 export default function Home() {
   //WIP: remove fault IMAge for home page
@@ -22,13 +25,27 @@ export default function Home() {
                     Start For Free Today
                   </span>
                 </Button>
-                <h1 className="text-5xl md:text-8xl  bg-clip-text text-transparent bg-gradient-to-b from-white to-neutral-600 font-sans font-bold">
+                <h1 className="text-5xl mb-20 md:text-8xl  bg-clip-text text-transparent bg-gradient-to-b from-white to-neutral-600 font-sans font-bold">
                   Automate Your Work With AURA
                 </h1>
               </div>
             }
           />
         </div>
+      </section>
+      <section className="flex flex-col items-center justify-center h-screen w-full bg-neutral-950 mt-20">
+        <InfiniteMovingCards
+          className="md:mt-[18rem] mt-[-100px]"
+          items={clients}
+          direction="right"
+          speed="slow"
+        />
+      </section>
+      <section>
+        <HeroParallax products={products}></HeroParallax>
+      </section>
+      <section className="mt-[150px]">
+        <LampComponent />
       </section>
     </main>
   );
